@@ -17,6 +17,15 @@ npm run dev        # runs API on :3001 + Vite dev server (proxies /api)
 
 Open the printed Vite URL (default http://localhost:5173).
 
+### Environment variables
+
+See `env.example` — copy it to `.env` if you want to override defaults. All values are non-secret:
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `PORT` | `API_PORT`, then `3001` | Port the server binds to (injected automatically by hosting previews) |
+| `API_PORT` | `3001` | API port during `npm run dev`, where Vite proxies `/api` |
+
 Production-style build: `npm run build` (outputs `dist/`), then serve it with any static server that proxies `/api` to `node server/index.js`.
 
 ## Backend contract
